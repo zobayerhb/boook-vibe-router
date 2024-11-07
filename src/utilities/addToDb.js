@@ -1,3 +1,5 @@
+import { Bounce, toast } from "react-toastify";
+
 // mark as read data store and get to local storage
 const getStoredReadList = () => {
   const storedData = localStorage.getItem("book-list");
@@ -17,6 +19,17 @@ const addToStoredData = (id) => {
     storedData.push(id);
     const dataStore = JSON.stringify(storedData);
     localStorage.setItem("book-list", dataStore);
+    toast.success("Successfully added book read list", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      transition: Bounce,
+    });
   }
 };
 
