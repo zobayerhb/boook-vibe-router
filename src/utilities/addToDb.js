@@ -42,4 +42,4 @@ const addStoredWishListData = (id) => {
   }
 };
 
-export { addToStoredData, addStoredWishListData };
+export { addToStoredData, addStoredWishListData, getStoredReadList };
