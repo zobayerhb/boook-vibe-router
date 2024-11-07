@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Book = ({ book }) => {
   console.log(book);
-  const {bookId, image, bookName, author } = book;
+  const {bookId, image, bookName, author, totalPages,rating } = book;
 
   return (
     <Link to={`books/${bookId}`}>
@@ -14,6 +14,8 @@ const Book = ({ book }) => {
         <div className="card-body">
           <h2 className="card-title">{bookName}</h2>
           <p>By: {author}</p>
+          {totalPages} {' '}
+          {rating}
           <div className="card-actions justify-end">
             <div className="badge badge-outline">Fashion</div>
             <div className="badge badge-outline">Products</div>
